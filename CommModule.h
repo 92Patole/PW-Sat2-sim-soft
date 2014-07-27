@@ -2,7 +2,10 @@
 #define COMMMODULE_H
 
 #include <Module.h>
-
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <vector>
 /**
  How it should work summary:
 - FIFO of incoming and outgoing data
@@ -29,8 +32,8 @@ class CommModule : public Module
     protected:
     private:
         bool connection_to_base_flag; //!< Member variable "connection_to_base_flag"
-        vector<uint8_t> data_to_send; //!< Member variable "data_to_send"
-        vector<uint8_t> received_data; //!< Member variable "received_data"
+        std::vector<unsigned char> data_to_send; //!< Member variable "data_to_send"
+        std::vector<unsigned char> received_data; //!< Member variable "received_data"
         unsigned int bitrate; //!< Member variable "bitrate"
 };
 

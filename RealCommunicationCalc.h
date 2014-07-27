@@ -28,7 +28,7 @@ class RealCommunicationCalc
     protected:
     private:
         float distance_to_base; //!< Member variable "distance_to_base"
-        ffloat power_suppression; //!< Member variable "power_suppression"
+        float power_suppression; //!< Member variable "power_suppression"
         double time_to_base_connection; //!< Member variable "time_to_base_connection"
 };
 

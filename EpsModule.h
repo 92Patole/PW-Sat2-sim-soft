@@ -2,7 +2,9 @@
 #define EPSMODULE_H
 
 #include <Module.h>
-
+#include <Accumulator.h>
+#include <SolarPanel.h>
+#include <vector>
 /**
 How it should work summary:
 - should simulate efficiency of power processing and return power obtained
@@ -19,8 +21,8 @@ class EpsModule : public Module
     protected:
     private:
         unsigned int state_of_power; //!< Member variable "state_of_power"
-        vector<Accumulator> batteries; //!< Member variable "batteries"
-        vector<SolarPanel> solars; //!< Member variable "solars"
+        std::vector<Accumulator> batteries; //!< Member variable "batteries"
+        std::vector<SolarPanel> solars; //!< Member variable "solars"
 };
 
 #endif // EPSMODULE_H

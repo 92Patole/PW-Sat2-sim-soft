@@ -34,6 +34,8 @@ class Accumulator
          * \return The current value of max_charge_cycles
          */
         unsigned int Getmax_charge_cycles() { return max_charge_cycles; }
+        void charge (float energy_in_mAh);
+        void discharge (float energy_in_mAh );
     protected:
     private:
         float max_capacity; //!< Member variable "max_capacity"
@@ -41,6 +43,13 @@ class Accumulator
         float current_energy_level; //!< Member variable "current_energy_level"
         unsigned int current_charge_cycles; //!< Member variable "current_charge_cycles"
         unsigned int max_charge_cycles; //!< Member variable "max_charge_cycles"
+};
+
+enum accumulator_state
+       {
+    charging,
+    discharging,
+    crashed
 };
 
 #endif // ACCUMULATOR_H

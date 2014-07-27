@@ -13,8 +13,27 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    Accumulator.cpp \
+    AdcsModule.cpp \
+    CommModule.cpp \
+    DataOperator.cpp \
+    EpsModule.cpp \
+    Module.cpp \
+    RealCommunicationCalc.cpp \
+    RealOrbitPosition.cpp \
+    SolarPanel.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    Accumulator.h \
+    AdcsModule.h \
+    Comm.h \
+    CommModule.h \
+    DataOperator.h \
+    EpsModule.h \
+    Module.h \
+    RealCommunicationCalc.h \
+    RealOrbitPosition.h \
+    SolarPanel.h
 
 FORMS    += mainwindow.ui

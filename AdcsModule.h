@@ -19,18 +19,18 @@ class AdcsModule : public Module
         /** Access state_of_correction
          * \return The current value of state_of_correction
          */
-        unsigned int enum Getstate_of_correction() { return state_of_correction; }
+        unsigned int Getstate_of_correction() { return state_of_correction; }
         /** Set state_of_correction
          * \param val New value to set
          */
-        void Setstate_of_correction(unsigned int enum val) { state_of_correction = val; }
+        void Setstate_of_correction(unsigned int val) { state_of_correction = val; }
         /** Access results_of_position
          * \return The current value of results_of_position
          */
         float Getresults_of_position() { return results_of_position; }
     protected:
     private:
-        unsigned int enum state_of_correction; //!< Member variable "state_of_correction"
+        unsigned int state_of_correction; //!< Member variable "state_of_correction"
         float results_of_position; //!< Member variable "results_of_position"
 };
 
