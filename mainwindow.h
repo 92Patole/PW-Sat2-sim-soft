@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <Accumulator.h>
+#include <DataOperator.h>
 
 namespace Ui {
 class MainWindow;
@@ -15,14 +16,15 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
+    void make_tick();
 private slots:
-    void on_pushButton_2_clicked();
 
-    void on_pushButton_clicked();
+    void iterateSatelliteTime();
+
+    void on_powerConsumption_valueChanged(int value);
 
 private:
-    Accumulator acc;
+    DataOperator satellite;
     void chargeAcc();
     void dischargeAcc();
     Ui::MainWindow *ui;

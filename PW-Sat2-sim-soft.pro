@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = PW-Sat2-sim-soft
 TEMPLATE = app
 
+CONFIG += c++11
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -27,7 +28,6 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     Accumulator.h \
     AdcsModule.h \
-    Comm.h \
     CommModule.h \
     DataOperator.h \
     EpsModule.h \

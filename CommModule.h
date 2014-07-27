@@ -29,6 +29,8 @@ class CommModule : public Module
          * \param val New value to set
          */
         void Setbitrate(unsigned int val) { bitrate = val; }
+        virtual void updateIteration();
+        virtual float getPowerConsumption();
     protected:
     private:
         bool connection_to_base_flag; //!< Member variable "connection_to_base_flag"

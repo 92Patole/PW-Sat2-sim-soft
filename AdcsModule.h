@@ -28,6 +28,8 @@ class AdcsModule : public Module
          * \return The current value of results_of_position
          */
         float Getresults_of_position() { return results_of_position; }
+        void updateIteration();
+        virtual float getPowerConsumption();
     protected:
     private:
         unsigned int state_of_correction; //!< Member variable "state_of_correction"

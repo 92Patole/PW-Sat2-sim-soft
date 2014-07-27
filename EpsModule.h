@@ -18,9 +18,16 @@ class EpsModule : public Module
         EpsModule();
         /** Default destructor */
         virtual ~EpsModule();
+        virtual void updateIteration();
+        virtual float getPowerConsumption();
+        float getEnergyLevel(){ return total_energy; };
+        void obtain_energy(float energy);
     protected:
     private:
         unsigned int state_of_power; //!< Member variable "state_of_power"
+        float total_energy;
+        void updateTotalEnergy();
+
         std::vector<Accumulator> batteries; //!< Member variable "batteries"
         std::vector<SolarPanel> solars; //!< Member variable "solars"
 };

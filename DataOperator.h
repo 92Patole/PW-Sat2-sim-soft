@@ -2,7 +2,7 @@
 #define DATAOPERATOR_H
 #include "Module.h"
 #include <vector>
-
+#include "EpsModule.h"
 
 /**
 How it should work summary:
@@ -24,11 +24,14 @@ class DataOperator
         DataOperator();
         /** Default destructor */
         virtual ~DataOperator();
+        float getPowerBudget(){return energy_budget; };
+        void iterateAllModules();
+        void setPowerConsumption(unsigned int i, float powerC);
     protected:
     private:
-        double power_budget=0; //!< Member variable "power_budget"
+        float energy_budget=0; //!< Member variable "power_budget"
         double current_time=0; //!< Member variable "current_time"
-        std::vector<Module> modules; //!< Member variable "modules"
+        std::vector<Module*> modules; //!< Member variable "modules"
 };
 
 #endif // DATAOPERATOR_H

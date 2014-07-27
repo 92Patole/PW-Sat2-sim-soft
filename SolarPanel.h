@@ -31,6 +31,7 @@ class SolarPanel
          * \param val New value to set
          */
         void Setcurrent_solarrays_power(float val) { current_solarrays_power = val; }
+        void updateSolarPanel();
     protected:
     private:
         float efficiency; //!< Member variable "efficiency"
