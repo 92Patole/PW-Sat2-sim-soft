@@ -5,7 +5,7 @@
 class Module
 {
     public:
-        float single_iteration_time=1; // in seconds
+        float single_iteration_time=0.1; // in seconds
         float power_consumption=0;
         bool turn_on_flag = true;
         /** Default constructor */

@@ -23,7 +23,7 @@ void DataOperator::iterateAllModules()
     for(int i=0; i<modules.size(); i++)
     {
         modules[i]->updateIteration();
-        neeed_energy += ((float)(modules[i]->getPowerConsumption())) / (3.6 *5) ;// [w] -> mAh ref to 5V;
+        neeed_energy += ((float)(modules[i]->getPowerConsumption())) * modules[i]->getIterationTime() / (3.6 *5) ;// [w] -> mAh ref to 5V;
     }
     // Eps module shiuld be always the first
     ((EpsModule*)modules[0])->obtain_energy(neeed_energy);

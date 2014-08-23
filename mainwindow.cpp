@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(iterateSatelliteTime()));
-    timer->start(500); // execute sattelite iteration every one second
+    timer->start(100); // execute sattelite iteration every one second
 }
 
 MainWindow::~MainWindow()
